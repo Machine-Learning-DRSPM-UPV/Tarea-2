@@ -1,0 +1,124 @@
+%\documentclass[letterpaper,aps,twocolumn,pre,nofootinbib]{revtex4}
+%\documentclass[twocolumn]{article}
+\documentclass[conference]{IEEEtran}
+\usepackage[spanish]{babel}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{graphicx}
+%\usepackage{bbm}
+\usepackage[utf8]{inputenc} % Caracteres en Español (Acentos, ñs)
+\usepackage{url} % ACENTOS
+\usepackage{hyperref} % Referencias
+\usepackage{subfig}
+\usepackage{lipsum}
+\usepackage{balance}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PARCHE PARA ELIMINAR LA FECHA DEL DOCUMENTO
+% 
+\usepackage{etoolbox}
+\makeatletter
+% \frontmatter@RRAP@format is responsible for the parentheses
+\patchcmd{\frontmatter@RRAP@format}{(}{}{}{}
+\patchcmd{\frontmatter@RRAP@format}{)}{}{}{}
+%\renewcommand\Dated@name{}
+\makeatother	
+% FIN DEL PARCHE
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PARCHE PARA PERMIRIR UTILIZAR BIBLATEX EN ESTA PANTLLA
+%\PassOptionsToPackage{square,numbers}{natbib}
+%\RequirePackage{natbib}  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[backend=bibtex,sorting=none]{biblatex}
+% Estas lineas permiten romper los hipervinculos muy largos !!!!
+\setcounter{biburllcpenalty}{7000}
+\setcounter{biburlucpenalty}{8000}
+\addbibresource{references.bib}
+
+% Actualiza en automático la fecha de las citas de internet a la fecha de la compilación del documento
+\usepackage{datetime}
+\newdateformat{specialdate}{\twodigit{\THEDAY}-\twodigit{\THEMONTH}-\THEYEAR}
+\date{\specialdate\today}
+
+% la sentencia \burl en las citas... 
+\usepackage[hyphenbreaks]{breakurl}
+
+\renewcommand\spanishtablename{Tabla}
+\renewcommand\spanishfigurename{Figura}
+
+%\usepackage{datetime}
+%\newdateformat{specialdate}{\twodigit{\THEDAY}-\twodigit{\THEMONTH}-\THEYEAR}
+%\newdateformat{specialdate}{\twodigit{\THEDAY}-\THEYEAR}
+%\date{\specialdate\today}
+
+
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Definitions
+%
+%
+% Define your special symbols here
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% use to set width of figures
+\newcommand{\breite}{0.9} %  for twocolumn
+\newcommand{\RelacionFiguradoscolumnas}{0.9}
+\newcommand{\RelacionFiguradoscolumnasPuntoCinco}{0.45}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% End Definitions
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%Title of paper
+\title{Resumen \\ Definición del Problema.}
+
+% Trabajo Individual
+\author{\IEEEauthorblockN{José Luis Pérez Avila\IEEEauthorrefmark{1}}
+% En caso de trabajos en equipo, poner a todos los autores en estricto ORDEN ALFABETICO
+%\author{\IEEEauthorblockN{Michael Shell\IEEEauthorrefmark{1},
+%Homer Simpson\IEEEauthorrefmark{1},
+%James Kirk\IEEEauthorrefmark{1}, 
+%Montgomery Scott\IEEEauthorrefmark{1} and
+%Eldon Tyrell\IEEEauthorrefmark{1}}
+\IEEEauthorblockA{\IEEEauthorrefmark{1}Maestría en Ingeniería\\
+Universidad Politécnica de Victoria}
+}
+
+
+%\date{}
+
+\maketitle
+
+El planteamiento del problema (objetivos del estudio, las preguntas de investigación y la justificación) y las hipótesis consecuentes surgen en cualquier parte del proceso en un estudio cualitativo: desde que la idea se ha desarrollado hasta, incluso, al elaborar el reporte de investigación. El planteamiento del problema se desarrolla una vez que se ha concebido la idea a investigar y el investigador ha profundizado en el tema en cuestión. Este no es sino afinar y estructurar más formalmente la idea de investigación. En ocaciones pasar al planteamiento del problema puede ser inmediatamente, esto depende de cuan familiarizado esté el investigador con el tema a tratar. El planteamiento del problema llega a tener lugar en diferentes momentos de la investigación: 1. en este segundo paso que sigue a la generación de la idea de investigación, 2. durante el proceso de investigacón y 3. Al final del proceso investigativo. Como señala Ackoff (1967): \textit{Un problema correctamente planteado está parcialmente resuelto}; a mayor exatitud corresponden más posibilidades de obtener una solución satisfactoria. Los criterios para plantear un problema son: 1. EL problema debe expresar una relación entre dos o más variables, 2. El problema debe estar formulado claramente y sin ambigüedad como pregunta por ejemplo, ¿qué efecto?, ¿en qué condiciones...? ¿cuál es la probabilidad de...? ¿cómo se relaciona...con...? y 3. El planteamiento debe implicar la posibilidad de realizar una prueba empírica o una recolección de datos. 
+
+Los \textbf{elementos que contiene el planteamiento del problema} son: 1. Objetivos de investigación, 2. Preguntas de investigación, 3. Justificación de la investigación, 4. Criterios para evaluar el valor potencial de una investigación, 5. Viabilidad de la investigación y 6. Consecuencias de la investigación. Con los \textbf{objetivos de la investigación} se establece qué pretende la investigación. Estos tienen que expresarse con claridad para evitar posibles desviaciones en el proceso de investigación y deben ser susceptibles de alcanzarse. Durante la investigación es posible que surjan nuevos objetivos adicionales, se modifiquen los objetivos iniciales o incluso se sustituyan. Las \textbf{preguntas de investigación} nos ayuda a presentar de manera directa y minimizando la distorición de la investigación. No siempre en las preguntas se comunica el problema en su totalidad, a veces se formula solamente el propósito del estudio, aunque las preguntas debe resumir lo que habrá de ser la investigación. Las preguntas pueden ser más o menos generales, como se mencionó anteriormente, pero en la mayoría de los casos es mejor que sean más precisas. Se pueden plantear una o varias preguntas y acompañarlas de una breve explicación del tiempo, el lugar y las unidades de observación del estudio. Además de los objetivos y las preguntas, es necesario  \textbf{justificación} el estudio exponiendo sus razones. Las investigaciónes se efectúan normalmente con un propósito definido y ese propósito debe ser lo suficientemente fuerte para hacerse la investigacón. Debe de explicarse el porque es conveniete y cuales son sus beneficios. Cuando una investigación resuelve un problema social, a construir una nueva teoría o generar preguntas de investigación puede llegar ser conveniente realizarla. Establecer una serie de criterios para evaluar la utilidad de un estudio propuesto, los cuales deben ser flexibles y de ninguna manera son exhaustivos. Algunas preguntas para desarrollar los \textbf{criterios de evaluación} son: 1. Conveniencia,¿Qué tan convenite es la investigación?, 2. Relevancia Social. ¿Cuál es su trascendencia para la sociedad?, 3. Implicaciones prácticas, ¿Ayudará a resolver algún problema, 4. Valor teórico, ¿Con la investigación, se llenará algún huevo de conocimiento?, 5. Utilidad metodológica, ¿La investigación puede ayudar a crear un nuevo instrumento para recolectar o analizar datos?. En la \textbf{viabilidad de la investigación} se deben de tomar en cuenta la disponibilidad de recursos financieros, humanos y materiales que determinarán, los alcances de la investigación. Aunque no sea con fines científicas, es necesario que el investigador se cuestione acerca de las \textbf{consecuencias de su estudio}. 
+
+Las \textbf{hipótesis} indican lo que estamos buscando o tratando de probar y se definen como explicaciones tentativas del fenómeno investigado, formuladas a manera de proposiciones. El formular una hipótesis depende de dos factores esenciales: el enfoque del estudio y el alcance inicial del mismo. Se pueden tener mas de una hipótesis, no siempre tiene que ser verdadera la hipótesis. Este elemento propone tentativamente las respuestas a las preguntas de investigación, la relación entre ambas es directa e íntima. Las hipótesis relevan a los objetivos y las preguntas de investigación para guiar el estudio. Por ello, las hipótesis comúnmente surgen de los objetivos y las preguntas de investigación. Caracteristicas de la hipótesis: 1. debe referirse a una situación social real, 2. los terminos deben ser comprensibles, precisos y concretos, 3. la relación entre variables debe ser clara y verosímil, 4. los terminos y la relación planteada entre ellos debe ser observable y mediable y 5. las hipótesis deben estar relacionadas con técnicas disponibles para probarlas. 
+
+\addcontentsline{toc}{section}{Referencias}
+\printbibliography
+%\balance
+
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
